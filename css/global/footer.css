@@ -1,0 +1,129 @@
+/* .footer-conteudo */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 0.5fr;
+  gap: 30px;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.footer-grid-item:nth-child(1) img {
+  width: 100%;
+}
+
+.footer-grid-item:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  color: var(--cor-05);
+}
+
+.footer-grid-item:nth-child(2) h2 {
+  margin-bottom: 1rem;
+  color: var(--cor-06);
+}
+
+.footer-grid-item:nth-child(2) p {
+  margin-bottom: 1.5rem;
+}
+
+.footer-grid-item:nth-child(2) .leia-mais {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+  color: var(--cor-06);
+  margin: 0 0 0 auto;
+}
+
+.footer-grid-item:nth-child(2) .leia-mais img {
+  transition: linear .3s;
+  width: 18px;
+}
+
+.footer-grid-item:nth-child(2) .leia-mais:hover img {
+  transform: rotate(90deg);
+}
+
+.footer-grid-item:nth-child(3) .box-img {
+  position: relative;
+}
+
+.footer-grid-item:nth-child(3) .box-img .btn-compra {
+  position: absolute;
+  top: 96px;
+  left: 21px;
+  border: none;
+  background: #d30c23;
+  font-size: 1rem;
+  font-weight: 550;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  color: var(--cor-00);
+  clip-path: polygon(88% 0, 100% 50%, 88% 100%, 0% 100%, 0 50%, 0% 0%);
+  cursor: pointer;
+}
+
+.menu-rodape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  background: url('../../images/fundo-rodape.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menu-rodape-conteudo {
+  position: relative;
+  top: 15%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 4rem;
+  align-items: center;
+}
+
+.menu-rodape-conteudo ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.menu-rodape-conteudo ul li a {
+  color: #513D36;
+  font-weight: 550;
+}
+
+@media(max-width: 1000px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    padding-inline: 1rem;
+  }
+
+  .footer-grid-item:nth-child(1) img {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .menu-rodape {
+    height: 360px;
+    padding-inline: 1rem;
+  }
+
+  .menu-rodape-conteudo {
+    top: 10%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .menu-rodape-conteudo ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,77 @@
+.introducao-container {
+  position: relative;
+}
+
+.introducao {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  column-gap: 4rem;
+}
+
+.introducao .box-texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.introducao .box-texto h1 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.introducao .box-texto span {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.introducao .box-texto h2 {
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.introducao .box-texto p {
+  text-transform: initial;
+  font-weight: 550;
+}
+
+.introducao .box-img {
+  width: 50%;
+}
+
+.introducao-container::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: url('../../images/banner-cafe.png');
+  background-size: cover;
+}
+
+
+@media(max-width: 1000px) {
+  .introducao {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .introducao .box-texto h1 {
+    font-size: 2.5rem;
+  }
+  
+  .introducao .box-texto span {
+    font-size: 1.5rem;
+  }
+  
+  .introducao .box-texto h2 {
+    font-size: 4.5rem;
+  }
+
+  .introducao-container::after {
+    bottom: -120px;
+  }
+}
